@@ -9,6 +9,7 @@ import random
 from lib.engine_wrapper import MinimalEngine
 from lib.types import MOVE, HOMEMADE_ARGS_TYPE
 import logging
+import eval
 
 
 # Use this logger variable to print messages to the console or log files.
@@ -104,6 +105,7 @@ class FalafelGambitEngine(MinimalEngine):
         :param root_moves: If it is a list, the engine should only play a move that is in `root_moves`.
         :return: The move to play.
         """
+        print(eval.eval(board))
         if isinstance(time_limit.time, int):
             my_time = time_limit.time
             my_inc = 0
